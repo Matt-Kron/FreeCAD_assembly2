@@ -4,7 +4,7 @@ from pivy import coin
 from PySide import QtGui
 
 __dir2__ = os.path.dirname(__file__)
-GuiPath = os.path.join( __dir2__, 'Gui' )
+GuiPath = os.path.expanduser ("~") #GuiPath = os.path.join( __dir2__, 'Gui' )
 class PlaneSelectionGate:
      def allow(self, doc, obj, sub):
           return planeSelected( SelectionExObject(doc, obj, sub) )
